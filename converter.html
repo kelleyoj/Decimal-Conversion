@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decimal Converter</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/converter.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h1><i class="fas fa-calculator"></i> Decimal Converter</h1>
+                <div class="rounded">
+                    <form>
+                        <div>
+                            <div class="space">Enter Decimal Number:</div>
+                            <input type="number" class="form-control" name="decimalInput">
+                        </div>
+
+                        <div class="space">
+                            <button type="button" class="btn btn-info" name="submitBtn"><i class="fas fa-sync"></i>
+                                Convert</button>
+                            <button type="button" class="btn btn-info" name="resetBtn"><i class="fas fa-minus-circle"></i>
+                                Reset</button>
+                        </div>
+
+                        <div>
+                            <div class="space">Binary Number:</div>
+                            <textarea name="binaryArea" class="form-control" disabled></textarea>
+                        </div>
+
+                        <div>
+                            <div class="space">Hex Number:</div>
+                            <textarea name="hexArea" class="form-control" disabled></textarea>
+                        </div>
+
+                        <div>
+                            <div class="space">Octal Number:</div>
+                            <textarea name="octalArea" class="form-control" disabled></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div id="bubbleStyle">
+                    <div id="style" class="speech-bubble">
+                        <h5><i class="fas fa-clipboard-list"></i> Instructions</h5>
+                        <ul>
+                            <li>Write the number you want to be changed into the first line</li>
+                            <li>Click the convert button and watch the magic happen</li>
+                            <li>If you made a mistake click the reset button </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="jumbotron">
+                    <h4><strong>Converting from Decimal to Binary:</strong></h4>
+                    <ul>
+                        <li>Divide the number by 2.</li>
+                        <li>Get the integer quotient for the next iteration.</li>
+                        <li>Get the remainder for the binary digit.</li>
+                        <li>Repeat the steps until the quotient is equal to 0.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="jumbotron">
+                    <h4><strong>Converting from Decimal to Hex:</strong></h4>
+                    <ul>
+                        <li>Divide the decimal number by 16. Treat the division as an integer division.</li>
+                        <li>Write down the remainder (in hexadecimal).</li>
+                        <li>Divide the result again by 16. Treat the division as an integer division. </li>
+                        <li>Repeat step 2 and 3 until result is 0.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="jumbotron">
+                    <h4><strong>Converting from Decimal to Octal:</strong></h4>
+                    <ul>
+                        <li>Take the given decimal number</li>
+                        <li>If the number is less than 8 the octal number is the same</li>
+                        <li>If the number is greater than 7 then Divide the number with 8</li>
+                        <li>Note the remainder</li>
+                        <li>Carry on the step 3 and 4 with the qoutient till it is less than 8</li>
+                        <li>Write the remainders in reverse order(bottom to top)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/converter.js"></script>
+</body>
+
+</html>
